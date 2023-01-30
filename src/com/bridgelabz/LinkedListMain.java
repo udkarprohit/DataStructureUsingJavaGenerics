@@ -11,5 +11,12 @@ public class LinkedListMain {
         linkedListOne.push(56);
 
         linkedListOne.display();
+
+        System.out.println("Appending : ");
+        LinkedList<Integer> linkedListTwo = new LinkedList<>();
+        linkedListTwo.append(56);
+        linkedListTwo.append(30);
+        linkedListTwo.append(70);
+        linkedListOne.display();
     }
 }
