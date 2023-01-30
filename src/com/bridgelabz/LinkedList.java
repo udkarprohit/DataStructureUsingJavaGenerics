@@ -16,7 +16,6 @@ public class LinkedList<L> {
             head = newNode;
         }
     }
-
     //Displaying the linked-list
     public void display() {
         Node<L> temp = head;

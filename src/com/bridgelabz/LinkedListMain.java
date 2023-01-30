@@ -11,6 +11,5 @@ public class LinkedListMain {
         linkedListOne.push(56);
 
         linkedListOne.display();
-
     }
 }
