@@ -16,9 +16,14 @@ public class LinkedList<L> {
             head = newNode;
         }
     }
-    //Deleting elements from start
-    public void deleteFromStart() {
-        head = head.next;
+
+    //Deleting element from Ending
+    public void deleteFromEnd() {
+        Node temp = head;
+        while (temp.next.next != null) {
+            temp = temp.next;
+        }
+        temp.next = null;
     }
 
     //Displaying the linked-list
