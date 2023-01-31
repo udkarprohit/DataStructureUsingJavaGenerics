@@ -4,19 +4,14 @@ public class LinkedListMain {
 
     public static void main(String[] args) {
         //Creating Object of LinkedList class.
-        LinkedList<Integer> linkedListOne = new LinkedList<>();
+        System.out.println("Inserting :- ");
         //Calling non-static method using object
-        linkedListOne.push(70);
-        linkedListOne.push(30);
-        linkedListOne.push(56);
+        LinkedList<Integer> linkedListThree = new LinkedList<>();
+        linkedListThree.push(70);
+        linkedListThree.push(56);
+        linkedListThree.insert(56, 30);
 
-        linkedListOne.display();
+        linkedListThree.display();
 
-        System.out.println("Appending : ");
-        LinkedList<Integer> linkedListTwo = new LinkedList<>();
-        linkedListTwo.append(56);
-        linkedListTwo.append(30);
-        linkedListTwo.append(70);
-        linkedListOne.display();
     }
 }
