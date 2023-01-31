@@ -16,15 +16,9 @@ public class LinkedList<L> {
             head = newNode;
         }
     }
-    //inserting element after given data
-    public void insert(L sData, L data) {
-        Node<L> newNode = new Node<L>(data);
-        Node<L> current = head;
-        while (current.data != sData) {
-            current = current.next;
-        }
-        newNode.next = current.next;
-        current.next = newNode;
+    //Deleting elements from start
+    public void deleteFromStart() {
+        head = head.next;
     }
 
     //Displaying the linked-list
