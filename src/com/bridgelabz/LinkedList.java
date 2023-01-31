@@ -17,13 +17,16 @@ public class LinkedList<L> {
         }
     }
 
-    //Deleting element from Ending
-    public void deleteFromEnd() {
-        Node temp = head;
-        while (temp.next.next != null) {
-            temp = temp.next;
+    //Searching element from linked-list
+    public boolean searchNode(L data) {
+        Node current = head;
+        while (current != null) {
+            if (current.data == data) {
+                return true;
+            }
+            current = current.next;
         }
-        temp.next = null;
+        return false;
     }
 
     //Displaying the linked-list
