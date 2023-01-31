@@ -9,12 +9,11 @@ public class LinkedListMain {
         linkedListSix.push(70);
         linkedListSix.push(30);
         linkedListSix.push(56);
+        boolean isInserted = linkedListSix.insertAfter(40, 30);
         linkedListSix.display();
-        boolean result = linkedListSix.searchNode(30);
-        if (result) {
-            System.out.println("Node with value 30 found in the LinkedList.");
-        } else {
-            System.out.println("Node with value 30 not found in the LinkedList.");
-        }
+        if (isInserted)
+            System.out.println("Element inserted successfully");
+        else
+            System.out.println("Element not inserted");
     }
 }
