@@ -18,13 +18,24 @@ public class LinkedList<L> {
     }
 
     //Searching element from linked-list
-    public boolean searchNode(L data) {
-        Node current = head;
-        while (current != null) {
-            if (current.data == data) {
-                return true;
-            }
-            current = current.next;
+    public Node<L> searchNode(L sData) {
+        Node<L> temp = head;
+        while (temp != null) {
+            if (temp.data.equals(sData))
+                return temp;
+            temp = temp.next;
+        }
+        return null;
+    }
+
+    public boolean insertAfter(L insertElement, L searchData) {
+        Node<L> searchedData = searchNode(searchData);
+        if (searchedData != null) {
+            Node<L> newNode = new Node(insertElement);
+            Node<L> temp = searchedData.next;
+            searchedData.next = newNode;
+            newNode.next = temp;
+            return true;
         }
         return false;
     }
