@@ -28,16 +28,29 @@ public class LinkedList<L> {
         return null;
     }
 
-    public boolean insertAfter(L insertElement, L searchData) {
-        Node<L> searchedData = searchNode(searchData);
-        if (searchedData != null) {
-            Node<L> newNode = new Node(insertElement);
-            Node<L> temp = searchedData.next;
-            searchedData.next = newNode;
-            newNode.next = temp;
-            return true;
+    public L delete(L popData) {
+        Node<L> searchedData = searchNode(popData);
+        Node<L> temp = head;
+        Node<L> previousNode = null;
+        if (searchedData == head) {
+            head = temp.next;
+        } else {
+            while (temp != searchedData) {
+                previousNode = temp;
+                temp = temp.next;
+            }
+            previousNode.next = temp.next;
         }
-        return false;
+        return popData;
+    }
+    public void size(){
+        Node<L> temp = head;
+        int count = 0;
+        while ( temp != null){
+            temp = temp.next;
+            count++;
+        }
+        System.out.println("Size of linked-list is : "+count);
     }
 
     //Displaying the linked-list
