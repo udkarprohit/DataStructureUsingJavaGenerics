@@ -1,15 +1,15 @@
 package com.bridgelabz;
 
+import com.bridgelabz.stack.Stack;
+
 public class LinkedListMain {
 
     public static void main(String[] args) {
         //Creating Object of LinkedList class.
-        SortedLinkedList sortedLinkedList = new SortedLinkedList();
-        sortedLinkedList.sortLinkedlist(56);
-        sortedLinkedList.sortLinkedlist(30);
-        sortedLinkedList.sortLinkedlist(40);
-        sortedLinkedList.sortLinkedlist(70);
-        System.out.print("Sorted list :- ");
-        sortedLinkedList.display();
+        Stack<Integer> stack = new Stack<>();
+        stack.push(70);
+        stack.push(30);
+        stack.push(56);
+        stack.display();
     }
 }
