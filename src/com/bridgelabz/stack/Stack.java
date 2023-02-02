@@ -16,6 +16,17 @@ public class Stack<S> {
         }
     }
 
+    public boolean pop(){
+        while (top.next != null){
+            top = top.next;
+        }
+        if (top.next == null){
+            top = null;
+            return true;
+        }
+        return false;
+    }
+
     public void display() {
         Node<S> temp = top;
         while (temp != null) {
